@@ -172,14 +172,17 @@ def main(fastani_tab, out=False, identity=99.9, coverage=99.9, method='m1', matr
     redundant_genome_groups_co, M_trinagular_final_co = make_mcl_analysis(M_triangular_co, coverage)
 
     # STEP 4 : Wrinting list of non-redundant genomes (text file)
+    if method == None:
+        method = 'm1' # Deafaut
+    
     if method == 'm1':
         redundant_genome_filename = os.path.join(fastani_dirname, basename_out)
         redundant_genome_groups_id.to_csv(redundant_genome_filename+'.id.tab', sep='\t', header=False, index=False)
     elif method == 'm2':
         pass # Future implementation
     else:
-        if method != None:
             print('incorrect method')
+    print(method)
 
     # STEP 5: Writting matrix if True
     if matrix:
