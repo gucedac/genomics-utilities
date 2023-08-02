@@ -157,7 +157,7 @@ def main(fastani_tab, out=False, identity=99.9, coverage=99.9, method='m1', matr
     fastani_filename = os.path.basename(fastani_tab) # basename of fastani table (input)
     basename_out = fastani_filename # basename of outputs (default)
     if out:
-        basename_out = out
+        basename_out = os.path.basename(out)
     fastani_dirname = os.path.dirname(fastani_tab) # dirname of fastani output
     
     # STEP 1: Dataframe from fastani output
