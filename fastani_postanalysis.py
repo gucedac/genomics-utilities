@@ -181,8 +181,7 @@ def main(fastani_tab, out=False, identity=99.9, coverage=99.9, method='m1', matr
     elif method == 'm2':
         pass # Future implementation
     else:
-            print('incorrect method')
-    print(method)
+        print('incorrect method')
 
     # STEP 5: Writting matrix if True
     if matrix:
